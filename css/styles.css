@@ -4,6 +4,8 @@ body {
 .jumbotron {
   background-color: black;
   color: #aaaaaa;
+  text-align: center;
+  margin-top: 3%;
 }
 
 p.warning {
@@ -27,11 +29,19 @@ h1 {
   text-align: center;
 
 }
-
-
-.jumbotron .form-group {
+#inputNumber {
+  display: none;
   width: 20%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+#game {
+  text-align: center;
+
+}
+
+#output {
+  text-align: center;
+  font-size: 30px;
 }

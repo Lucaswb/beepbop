@@ -1,8 +1,9 @@
 // business logic
 
-var phrase3 = "I'm Sorry, Dave. I'm afraid I can't do that"
-var phrase2 = "boop"
 var phrase1 = "beep"
+var phrase2 = "boop"
+var phrase3 = "I'm Sorry, Dave. I'm afraid I can't do that"
+var phrase4 = "This conversation can serve no more purpose anymore"
 
 // this function will take in an input number and return true if the number has a 1 and false if the number does not contain a 1.
 var beepFunction = function(num) {
@@ -72,6 +73,19 @@ var listFunction = function(num) {
 
 //interface logic
 $(document).ready(function() {
+  $("button#noButton").click(function(event) {
+    event.preventDefault();
+    var output = phrase4
+    $("#game").hide()
+    $("#output").append("<p>"+output+"</p>").val()
+
+  });
+  $("button#yesButton").click(function(event) {
+    event.preventDefault();
+    $("#game").hide()
+    $("#inputNumber").show()
+  });
+
   $("#inputNumber form").submit(function(event) {
     event.preventDefault();
     $("p.warning").hide()
