@@ -77,7 +77,10 @@ $(document).ready(function() {
     event.preventDefault();
     var output = phrase4
     $("#game").hide()
+    $("#about").hide()
+    $("#output").show()
     $("#output").append("<p>"+output+"</p>").val()
+
 
   });
   $("button#yesButton").click(function(event) {
@@ -102,6 +105,7 @@ $(document).ready(function() {
         var numList = listFunction(num)
         var output = numList.join(', ')
       }
+      $("#output").show()
       $("#output").append("<p>"+output+"</p>").val()
     } else {
       $("p.warning").show()
