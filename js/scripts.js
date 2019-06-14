@@ -1,5 +1,8 @@
 // business logic
 
+var phrase3 = "I'm Sorry, Dave. I'm afraid I can't do that"
+var phrase2 = "boop"
+var phrase1 = "beep"
 
 // this function will take in an input number and return true if the number has a 1 and false if the number does not contain a 1.
 var beepFunction = function(num) {
@@ -47,30 +50,41 @@ var daveFunction = function(num) {
     return false;
   }
 }
-
-// var listFunction = function(num) {
-//   if
-// }
-
-var phrase3 = "I'm Sorry, Dave. I'm afraid I can't do that"
-var phrase2 = "boop"
-var phrase1 = "beep"
+// this will turn a single input number n to an array of numbers starting at 1 and finishing with the number n.
+var listFunction = function(num) {
+  var numArray = [];
+  for (var i = 1; i<= num; i+=1){
+    numArray.push(i)
+  }
+  for (var m = 0; m<=(num-1);m+=1){
+    if (numArray[m]===3){
+      numArray[m]=phrase3
+    } else if (numArray[m]===2){
+      numArray[m]=phrase2
+    } else if (numArray[m]===1){
+      numArray[m]=phrase1
+    } else {
+      continue
+    }
+  }
+  return numArray
+}
 
 //interface logic
 $(document).ready(function() {
   $("#inputNumber form").submit(function(event) {
     event.preventDefault();
-    alert("sup")
     var num = parseInt($("input#number1").val())
-    if (num){
+    if (num) {
       if (daveFunction(num)===true) {
-        alert(phrase3)
+        var output = phrase3
       } else if (boopFunction(num)===true) {
-        alert(phrase2)
+        var output = phrase2
       } else if (beepFunction(num)===true){
-        alert(phrase1)
+        var output = phrase1
       } else {
-        alert(false)
+        var numList = listFunction(num)
+        var output = numList.join(', ')
       }
     } else {
       alert("please type in a number")
