@@ -74,6 +74,8 @@ var listFunction = function(num) {
 $(document).ready(function() {
   $("#inputNumber form").submit(function(event) {
     event.preventDefault();
+    $("p.warning").hide()
+    $("#output p").remove();
     var num = parseInt($("input#number1").val())
     if (num) {
       if (daveFunction(num)===true) {
@@ -86,8 +88,9 @@ $(document).ready(function() {
         var numList = listFunction(num)
         var output = numList.join(', ')
       }
+      $("#output").append("<p>"+output+"</p>").val()
     } else {
-      alert("please type in a number")
+      $("p.warning").show()
     }
     event.preventDefault();
   })
