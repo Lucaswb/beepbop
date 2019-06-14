@@ -48,19 +48,25 @@ var daveFunction = function(num) {
   }
 }
 
-var num1 = 200
-var num2 = 100
-var num3 = 100
+var phrase3 = "I'm Sorry, Dave. I'm afraid I can't do that"
+var phrase2 = "boop"
+var phrase1 = "beep"
 
-
-alert(beepFunction(num1))
-alert(boopFunction(num2))
-alert(daveFunction(num3))
-
-// interface logic
-// $(document).ready(function(){
-//   $("form#inputNumber").submit(function(event){
-//     var num = parseInt($("input").val())
-//
-//   })
-// })
+//interface logic
+$(document).ready(function() {
+  $("#inputNumber form").submit(function(event) {
+    event.preventDefault();
+    alert("sup")
+    var num = parseInt($("input#number1").val())
+    if (daveFunction(num)===true) {
+      alert(phrase3)
+    } else if (boopFunction(num)===true){
+      alert(phrase2)
+    } else if (boopFunction(num)===true){
+      alert(phrase2)
+    } else {
+      alert(false)
+    }
+    event.preventDefault();
+  })
+})
