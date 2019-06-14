@@ -48,6 +48,10 @@ var daveFunction = function(num) {
   }
 }
 
+// var listFunction = function(num) {
+//   if
+// }
+
 var phrase3 = "I'm Sorry, Dave. I'm afraid I can't do that"
 var phrase2 = "boop"
 var phrase1 = "beep"
@@ -58,14 +62,18 @@ $(document).ready(function() {
     event.preventDefault();
     alert("sup")
     var num = parseInt($("input#number1").val())
-    if (daveFunction(num)===true) {
-      alert(phrase3)
-    } else if (boopFunction(num)===true){
-      alert(phrase2)
-    } else if (boopFunction(num)===true){
-      alert(phrase2)
+    if (num){
+      if (daveFunction(num)===true) {
+        alert(phrase3)
+      } else if (boopFunction(num)===true) {
+        alert(phrase2)
+      } else if (beepFunction(num)===true){
+        alert(phrase1)
+      } else {
+        alert(false)
+      }
     } else {
-      alert(false)
+      alert("please type in a number")
     }
     event.preventDefault();
   })
