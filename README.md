@@ -1,6 +1,6 @@
 # Lucas' BEEP BOOP
 
-#### This file contains HTML, JavaScript and CSS and is used to play a simple game where the user may enter a number and then receives a prompt based on the film 2001 space odyssey. 06/07/2019
+#### This file contains HTML, JavaScript and CSS and is used to play a simple game where the user may enter a number and then receives a prompt based on the film 2001 space odyssey. 06/14/2019
 
 #### By Lucas .B
 
